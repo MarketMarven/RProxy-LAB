@@ -18,6 +18,63 @@ Web by [Info](https://lab.evilginx.dev) | follow us on [Twitter](https://twitter
 
 #### Note: This project is intended solely for educational purposes and authorized testing. Any unauthorized or malicious use is strictly prohibited. The developer is not responsible for any misuse of the provided materials.
 
+https://github.com/user-attachments/assets/17280dd7-87d8-4621-9768-086e9c5e2add
+
+<details>
+  <summary>Installation Steps​</summary>
+
+  1. Update Package Lists
+     Begin by updating your system’s package lists to ensure you have the latest information on the newest versions of packages and their dependencies.
+     sudo apt-get update
+​
+  2. Install xrandr​
+     xrandr is a utility for managing screen resolutions and display settings.
+     -- Use this option if you want to run Playwright with Xserver (for example, in MobaXterm) so you can view the browser live.
+     -- If use "Headless: playwright.Bool(true)," do no need this to install.
+     sudo apt-get install x11-xserver-utils
+     
+  4. Install Google Chrome
+     -- Use Chrome only if you choose not to use the browsers included in the Playwright app. In the source you received, you don’t need these installations.​
+     Download and install the latest stable version of Google Chrome.
+
+    ```wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+       sudo dpkg -i google-chrome-stable_current_amd64.deb
+       sudo apt-get install -f # Install any missing dependencies```
+  
+  4. Install Go Programming Language
+    -- You will need to install the Go language, as the source code is in Go, and to compile it in Linux, you need Go installed.​
+    Go is essential for running Playwright-Go.
+   
+    ```wget https://golang.org/dl/go1.20.7.linux-amd64.tar.gz
+      sudo rm -rf /usr/local/go
+      sudo tar -C /usr/local -xzf go1.20.7.linux-amd64.tar.gz
+      export PATH=$PATH:/usr/local/go/bin
+      go version```
+      
+  5. Install Playwright-Go and Dependencies
+   -- You need to install the Playwright Go library, as the EvilGinx version for Google uses a module called EvilPlaywright. This module controls a real browser behind the reverse proxy to obtain certain tokens that otherwise cannot be retrieved correctly    due to the different host in the reverse proxy or due to Google detecting browser incompatibilities with video versions, fonts, etc.
+   
+    ```go get -u github.com/playwright-community/playwright-go
+       go run github.com/playwright-community/playwright-go/cmd/playwright@latest install --with-deps
+       go install github.com/playwright-community/playwright-go/cmd/playwright@latest
+       playwright install --with-dep```
+
+  6. Starting EvilGinx
+  To launch EvilGinx, execute the following command:
+
+    ```sudo /root/evilginx2/build/evilginx -p /root/evilginx/phishlets -developer```
+   
+  [COLOR=rgb(250, 197, 28)]sudo  [/COLOR] Runs the command with superuser (root) privileges, which are often necessary for network-related applications or services.
+ /root/evilginx/build/evilginx  This is the path to the compiled EvilGinx binary. Evilginx2 is a tool often used in phishing simulations or security testing to capture authentication tokens in real-time by acting as a reverse proxy.
+ -p /root/evilginx/phishlets Specifies the path where the phishlets are located. Phishlets are configuration files that define the behavior of EvilGinx for specific websites or services (e.g., Google, Facebook). These phishlets contain rules for  forwarding requests and capturing tokens and cookies.
+-developer: This allows for developer mode It does not use SSL from Evilginx with auto ssl using Let's Encrypt; instead, it will use the SSL settings provided by Cloudflare.
+  ​
+</details>
+
+https://github.com/user-attachments/assets/b3f2b02b-d7fd-4800-9060-1726a0e80f55
+
+https://github.com/user-attachments/assets/8f3f9f7c-985f-4ba6-af0a-1cd55e5f595a
+
 #### RProxy LAB aims to provide a collection of proxy configurations and modifications for studying authentication mechanisms. The repository includes:
 
 - Custom configurations for reverse proxy frameworks, inspired by Modlishka, Evilginx, EvilPuppet and others.
