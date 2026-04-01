@@ -18,6 +18,11 @@ Web by [Info](https://lab.evilginx.dev) | follow us on [Twitter](https://twitter
 
 #### Note: This project is intended solely for educational purposes and authorized testing. Any unauthorized or malicious use is strictly prohibited. The developer is not responsible for any misuse of the provided materials.
 
+#### Available PHISHLETs : x Google x 0365 x AOL x Yahoo x Binance x Blockchain x OKX x Telegram x ByBit x Icloud x OpenAI x X.com x Facebook x PayPal x Linkedin x Adobe x Bitget x Capital ONE x City x Laposte x Ibank x Privacy x Tonkeeper x Volksbank x Capitalist x BOA x Discord x Amazon x Airbnb
+
+> **INFO** You can also order any other website for "TESTING YOUR SERVICE" All tools and resources are provided for ethical and legal use only, such as authorized penetration testing and security research. RProxy LAB by cfs0x and its creators bear no responsibility for misuse, illegal activities, or any consequences arising from improper application of these tools. Users are solely accountable for ensuring compliance with all applicable laws and regulations.
+
+
 https://github.com/user-attachments/assets/17280dd7-87d8-4621-9768-086e9c5e2add
 
 <details>
