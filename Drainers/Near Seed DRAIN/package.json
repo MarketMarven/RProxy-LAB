@@ -1,0 +1,34 @@
+{
+  "name": "my-near",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@hot-labs/near-connect": "^0.11.1",
+    "@types/canvas-confetti": "^1.9.0",
+    "@vercel/analytics": "1.6.1",
+    "bn.js": "^5.2.3",
+    "canvas-confetti": "^1.9.4",
+    "lucide-react": "^0.564.0",
+    "near-api-js": "^7.2.0",
+    "near-seed-phrase": "^0.2.1",
+    "next": "16.2.0",
+    "react": "^19",
+    "react-dom": "^19"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.2.0",
+    "@types/bn.js": "^5.2.0",
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "postcss": "^8.5",
+    "tailwindcss": "^4.2.0",
+    "typescript": "5.7.3"
+  }
+}

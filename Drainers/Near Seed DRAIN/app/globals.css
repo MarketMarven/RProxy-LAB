@@ -1,0 +1,21 @@
+/* ============================================ */
+/* Global Styles                               */
+/* ============================================ */
+
+@import 'tailwindcss';
+
+/* Theme configuration */
+@theme inline {
+  --font-sans: 'Geist', 'Geist Fallback';
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+}
+
+/* Hidden scrollbar */
+.custom-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  display: none;
+}
