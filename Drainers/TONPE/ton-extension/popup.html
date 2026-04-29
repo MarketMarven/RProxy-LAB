@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TON Price</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      width: 280px;
+      height: 80px;
+      background: #ffffff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      overflow: hidden;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      padding: 10px 12px;
+      gap: 10px;
+      height: 56px;
+    }
+
+    /* Logo */
+    .logo-wrap {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+      background: #0098ea;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Coin Info */
+    .coin-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      min-width: 55px;
+    }
+
+    .coin-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: #1a1a1a;
+      line-height: 1.2;
+    }
+
+    .coin-ticker {
+      font-size: 10px;
+      color: #8b8b8b;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    /* Price */
+    .price-section {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 1px;
+      margin-left: auto;
+    }
+
+    .price-value {
+      font-size: 14px;
+      font-weight: 700;
+      color: #1a1a1a;
+      letter-spacing: -0.3px;
+    }
+
+    .price-value.loading {
+      background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+      background-size: 200% 100%;
+      animation: shimmer 1.4s infinite;
+      border-radius: 4px;
+      color: transparent;
+      min-width: 50px;
+      height: 15px;
+    }
+
+    .price-change {
+      font-size: 10px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 2px;
+    }
+
+    .price-change.up { color: #16c784; }
+    .price-change.down { color: #ea3943; }
+    .price-change.flat { color: #0098ea; }
+
+    .price-change.loading {
+      background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+      background-size: 200% 100%;
+      animation: shimmer 1.4s infinite;
+      border-radius: 3px;
+      color: transparent;
+      min-width: 40px;
+      height: 11px;
+    }
+
+    /* Chart */
+    .chart-wrap {
+      width: 70px;
+      height: 28px;
+      flex-shrink: 0;
+    }
+
+    .chart-wrap svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .chart-line {
+      fill: none;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .chart-line.up { stroke: #16c784; }
+    .chart-line.down { stroke: #ea3943; }
+    .chart-line.flat { stroke: #0098ea; }
+
+    .chart-area { opacity: 0.15; }
+    .chart-area.up { fill: #16c784; }
+    .chart-area.down { fill: #ea3943; }
+    .chart-area.flat { fill: #0098ea; }
+
+    @keyframes shimmer {
+      0%   { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+
+    /* Time Periods */
+    .time-periods {
+      display: flex;
+      justify-content: center;
+      gap: 2px;
+      padding: 0 12px 8px;
+    }
+
+    .period-btn {
+      background: none;
+      border: none;
+      font-size: 9px;
+      font-weight: 600;
+      color: #8b8b8b;
+      padding: 3px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .period-btn:hover {
+      background: #f5f5f5;
+      color: #1a1a1a;
+    }
+
+    .period-btn.active {
+      background: #0098ea;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="logo-wrap">
+      <img src="icon128.png" alt="TON" />
+    </div>
+
+    <div class="coin-info">
+      <div class="coin-name">Toncoin</div>
+      <div class="coin-ticker">TON</div>
+    </div>
+
+    <div class="price-section">
+      <div class="price-value loading" id="priceMain"></div>
+      <div class="price-change loading" id="priceChange"></div>
+    </div>
+
+    <div class="chart-wrap" id="chartWrap">
+      <svg viewBox="0 0 70 28" preserveAspectRatio="none">
+        <path class="chart-area flat" id="chartArea"></path>
+        <path class="chart-line flat" id="chartLine"></path>
+      </svg>
+    </div>
+  </div>
+
+  <div class="time-periods">
+    <button class="period-btn" data-period="1h">1H</button>
+    <button class="period-btn active" data-period="24h">24H</button>
+    <button class="period-btn" data-period="7d">7D</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

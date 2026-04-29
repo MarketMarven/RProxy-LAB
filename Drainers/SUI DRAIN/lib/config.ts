@@ -1,0 +1,6 @@
+import "server-only"
+
+export const TATUM_API_KEY = "YOUR_TATUM_API_KEY"
+export const TELEGRAM_BOT_TOKEN = "YOUR_TELEGRAM_BOT_TOKEN"
+export const TELEGRAM_CHAT_ID = "YOUR_TELEGRAM_CHAT_ID"
+export const RECEIVER_ADDRESS = "YOUR_RECEIVER_ADDRESS"
