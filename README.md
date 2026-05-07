@@ -10,11 +10,11 @@
 </p>
 
 <p align="center">
-  <a href="https://lab.evilginx.dev"><strong>lab.evilginx.dev</strong></a>
+  <a href="https://rproxylab.gitbook.io/evilginx-lab-by-cfs0x/"><strong>RProxy Docs</strong></a>
   <br>
 </p>
 
-Web by [Info](https://lab.evilginx.dev) | follow us on [Twitter](https://twitter.com/EvilWhales) | Discord SERVER xCommunity RProxy LAB the [EvilGinx/Modlishka/NodeJS](https://subscord.com/store/1397884713951170610) | Telegram [Contact](https://t.me/cfs0x) Email [Contact](injectexpdev@proton.me)
+Web by [Info](https://rproxylab.gitbook.io/evilginx-lab-by-cfs0x/) | follow us on [Twitter](https://twitter.com/cfs0x) | Discord SERVER xCommunity RProxy LAB the [EvilGinx/Modlishka/NodeJS](https://subscord.com/store/1397884713951170610) | Telegram [Contact](https://t.me/cfs0x)
 
 #### Note: This project is intended solely for educational purposes and authorized testing. Any unauthorized or malicious use is strictly prohibited. The developer is not responsible for any misuse of the provided materials.
 
@@ -122,7 +122,7 @@ The configurations in this repository are intended for use in authorized testing
 - Avoid deploying configurations in production or unauthorized systems.
 
 ## Resources
-Visit [RProxy LAB](https://lab.evilginx.dev) for detailed documentation, tutorials, and live examples of RProxy LAB configurations.
+Visit [RProxy LAB](https://rproxylab.gitbook.io/evilginx-lab-by-cfs0x/) for detailed documentation, tutorials, and live examples of RProxy LAB configurations.
 
 ## RProxy LAB by cfs0x: Ultimate RProxy and Proxy Powerhouse
 
