@@ -1,8 +1,7 @@
-
 <h3 align="center">RProxy LAB is a research project aimed at studying reverse proxy server configurations for authentication testing in controlled authorized environments.</h3>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/14e231d3-335e-4a58-9752-51218f6eca19" alt="jsdelivr-logo" width="512px" height="512px"/>
+  <img src="https://github.com/user-attachments/assets/a074a5ca-1374-4c53-be51-fb1bdf7d2c4d" alt="jsdelivr-logo" width="712px" height="512px"/>
   <br>
   <i>
     <br>This repository provides custom configurations and modifications based on advanced reverse proxy platforms such as Modlishka, Evilginx, EvilPuppet and others. These tools are designed for cybersecurity professionals, penetration testers, and red team employees to explore authentication vulnerabilities and develop secure systems.</i>
