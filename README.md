@@ -112,6 +112,111 @@ https://github.com/user-attachments/assets/8f3f9f7c-985f-4ba6-af0a-1cd55e5f595a
   </tr>
 </table>
 
+---
+Google reCAPTCHA v3 - 0.90 / 1.0
+Top-tier score. Google classifies the session as "very likely a human". Most anti-detect stacks plateau around 0.3-0.7.
+<img width="1637" height="1076" alt="recaptcha_score" src="https://github.com/user-attachments/assets/2401612a-c257-49f9-9545-7864fe8ff1d4" />
+
+Fingerprint Pro - bot: not detected, VPN: false, tampering: false, dev tools: not detected
+FingerprintJS Pro's full Smart Signals battery flips every flag to "Not detected". Browser correctly identified as Firefox 150 on Windows 10. Confidence score 0.9.
+<img width="1300" height="1074" alt="fingerprintpro" src="https://github.com/user-attachments/assets/df43f66f-494f-42ce-8828-ea779b8b7983" />
+
+## Usage
+### Random fingerprint per session
+**100% Playwright-compatible** - sync and async, all methods, zero API changes. If you already use Playwright, switching is two lines:
+
+```diff
+- from playwright.sync_api import sync_playwright
+- with sync_playwright() as p:
+-     browser = p.firefox.launch()
++ from invisible_playwright import InvisiblePlaywright
++ with InvisiblePlaywright() as browser:
+```
+
+Every session gets a unique, coherent fingerprint drawn from real-world Firefox telemetry (GPU / audio / fonts / ~400 other fields) and Bezier-curve mouse motion baked into the browser itself.
+
+**Sync**
+```python
+from invisible_playwright import InvisiblePlaywright
+
+with InvisiblePlaywright(proxy={"server": "socks5://...", "username": "u", "password": "p"}) as browser:
+    page = browser.new_page()
+    page.goto("https://example.com")
+    page.click("#submit")   # mouse arcs to the button on a Bezier curve
+```
+
+**Async**
+```python
+from invisible_playwright.async_api import InvisiblePlaywright
+
+async with InvisiblePlaywright(proxy={"server": "socks5://...", "username": "u", "password": "p"}) as browser:
+    page = await browser.new_page()
+    await page.goto("https://example.com")
+    await page.click("#submit")
+```
+
+The `browser` object is a `playwright.sync_api.Browser` / `playwright.async_api.Browser` - every Playwright method works as-is.
+
+---
+
+### Random fingerprint per session
+
+```python
+from invisible_playwright import InvisiblePlaywright
+
+with InvisiblePlaywright() as browser:
+    page = browser.new_page()
+    page.goto("https://creepjs-api.web.app")
+```
+
+Every call samples a new coherent profile. Log the seed to reproduce interesting runs:
+
+```python
+sf = InvisiblePlaywright()
+with sf as browser:
+    print("seed =", sf.seed)
+    # ...
+```
+
+### Reproducible fingerprint
+
+```python
+with InvisiblePlaywright(seed=42) as browser:
+    ...   # same GPU, same canvas hash, same audio context, every run
+```
+
+### Proxies
+
+```python
+proxy = {
+    "server": "socks5://gate.example.com:1080",
+    "username": "user",
+    "password": "pass",
+}
+with InvisiblePlaywright(proxy=proxy) as browser:
+    ...
+```
+
+Schemes supported: `socks5`, `socks4`, `http`, `https`. Auth works on all of them (SOCKS5 via patched `nsProtocolProxyService.cpp`, HTTP/HTTPS via Playwright). DNS is routed through the proxy by default, no local leak.
+
+### Pinning specific fingerprint fields
+
+By default everything comes from `seed`. To force specific values while the rest stays seed-derived:
+
+```python
+with InvisiblePlaywright(
+    seed=42,
+    pin={
+        "gpu.renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4090 Direct3D11)",
+        "gpu.vendor":   "Google Inc. (NVIDIA)",
+        "screen.width":  2560,
+        "screen.height": 1440,
+        "hardware.concurrency": 16,
+    },
+) as browser:
+    ...
+```
+
 ### Usage
 
 The configurations in this repository are intended for use in authorized testing environments only. Ensure you have explicit permission from system owners before deploying any tools or configurations. Follow these guidelines:
