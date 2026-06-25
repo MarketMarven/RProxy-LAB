@@ -19,6 +19,10 @@ Web by [Info](https://rproxylab.gitbook.io/evilginx-lab-by-cfs0x/) | follow us o
 
 #### Available PHISHLETs : x Google x 0365 x AOL x Yahoo x Binance x Blockchain x OKX x Telegram x ByBit x Icloud x OpenAI x X.com x Facebook x PayPal x Linkedin x Adobe x Bitget x Capital ONE x City x Laposte x Ibank x Privacy x Tonkeeper x Volksbank x Capitalist x BOA x Discord x Amazon x Airbnb
 
+#### Update Google 06/2026 + Automatic profile creation and archiving after the session ends (this way you won't lose cookies, user agent data, and fingerprint will be captured, and your cookies will last a long time)
+
+https://github.com/user-attachments/assets/785068a0-bebd-4d0f-aae7-aeedf0a521ff
+
 > **INFO** You can also order any other website for "TESTING YOUR SERVICE" All tools and resources are provided for ethical and legal use only, such as authorized penetration testing and security research. RProxy LAB by cfs0x and its creators bear no responsibility for misuse, illegal activities, or any consequences arising from improper application of these tools. Users are solely accountable for ensuring compliance with all applicable laws and regulations.
 
 
