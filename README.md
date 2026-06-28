@@ -17,7 +17,11 @@ Web by [Info](https://rproxylab.gitbook.io/evilginx-lab-by-cfs0x/) | follow us o
 
 #### Note: This project is intended solely for educational purposes and authorized testing. Any unauthorized or malicious use is strictly prohibited. The developer is not responsible for any misuse of the provided materials.
 
-#### Available PHISHLETs : x Google x 0365 x AOL x Yahoo x Binance x Blockchain x OKX x Telegram x ByBit x Icloud x OpenAI x X.com x Facebook x PayPal x Linkedin x Adobe x Bitget x Capital ONE x City x Laposte x Ibank x Privacy x Tonkeeper x Volksbank x Capitalist x BOA x Discord x Amazon x Airbnb
+#### Available PHISHLETs : x Google x 0365 x AOL x Yahoo x Binance x Blockchain x OKX x Telegram x ByBit x Icloud x OpenAI x X.com x Facebook x PayPal x Linkedin x Adobe x Bitget x Capital ONE x City x Laposte x Ibank x Privacy x Tonkeeper x Volksbank x Capitalist x BOA x Discord x Amazon x Airbnb x OKTA x Iamconnected.com&PortBase
+
+#### Update OKTA 06/2026 + Automatic profile creation and archiving after the session ends (this way you won't lose cookies, user agent data, and fingerprint will be captured, and your cookies will last a long time)
+
+https://github.com/user-attachments/assets/06846e5a-a06d-48d9-8bad-4e4a2939cded
 
 #### Update Google 06/2026 + Automatic profile creation and archiving after the session ends (this way you won't lose cookies, user agent data, and fingerprint will be captured, and your cookies will last a long time)
 
