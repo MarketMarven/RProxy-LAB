@@ -15,6 +15,10 @@
 
 Web by [Info](https://rproxylab.gitbook.io/evilginx-lab-by-cfs0x/) | follow us on [Twitter](https://twitter.com/cfs0x) | Discord SERVER xCommunity RProxy LAB the [EvilGinx/Modlishka/NodeJS](https://subscord.com/store/1397884713951170610) | Telegram [Contact](https://t.me/cfs0x)
 
+#### ADDED PROFF Dashboard EvilHooked PANLE 06/2026 Complete replacement of the CLI (full configuration, management, and modification of the EvilGinx tool itself via the dashboard)
+
+https://github.com/user-attachments/assets/72a0006a-cbf0-4f2d-8d39-a7bf387dd30f
+
 #### Note: This project is intended solely for educational purposes and authorized testing. Any unauthorized or malicious use is strictly prohibited. The developer is not responsible for any misuse of the provided materials.
 
 #### Available PHISHLETs : x Google x 0365 x AOL x Yahoo x Binance x Blockchain x OKX x Telegram x ByBit x Icloud x OpenAI x X.com x Facebook x PayPal x Linkedin x Adobe x Bitget x Capital ONE x City x Laposte x Ibank x Privacy x Tonkeeper x Volksbank x Capitalist x BOA x Discord x Amazon x Airbnb x OKTA x Iamconnected.com&PortBase
