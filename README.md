@@ -15,6 +15,11 @@
 
 Web by [Info](https://rproxylab.gitbook.io/evilginx-lab-by-cfs0x/) | follow us on [Twitter](https://twitter.com/cfs0x) | Discord SERVER xCommunity RProxy LAB the [EvilGinx/Modlishka/NodeJS](https://subscord.com/store/1397884713951170610) | Telegram [Contact](https://t.me/cfs0x)
 
+#### Full update of #Blockchain📷 #phishlets + auto-creation of a browser profile with a full profile backup with the ability to transfer to any browser. Сapture guid, email, password, wallet recovery phrases, cookies, 2FA.
+
+https://github.com/user-attachments/assets/1b6ea0ef-747b-4285-b141-f8af20c69fc8
+
+
 #### ADDED PROFF Dashboard EvilHooked PANLE 06/2026 Complete replacement of the CLI (full configuration, management, and modification of the EvilGinx tool itself via the dashboard)
 
 https://github.com/user-attachments/assets/72a0006a-cbf0-4f2d-8d39-a7bf387dd30f
