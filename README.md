@@ -10,7 +10,8 @@
 
 <p align="center">
   <a href="https://rproxylab.gitbook.io/evilginx-lab-by-cfs0x/"><strong>RProxy Docs</strong></a>
-  <br>
+  &nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="https://github.com/cfs0x/EvilHooked"><strong>EvilHOOKED</strong></a>
 </p>
 
 Web by [Info](https://rproxylab.gitbook.io/evilginx-lab-by-cfs0x/) | follow us on [Twitter](https://twitter.com/cfs0x) | Discord SERVER xCommunity RProxy LAB the [EvilGinx/Modlishka/NodeJS](https://subscord.com/store/1397884713951170610) | Telegram [Contact](https://t.me/cfs0x)
