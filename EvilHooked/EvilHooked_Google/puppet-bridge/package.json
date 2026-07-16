@@ -1,0 +1,25 @@
+{
+  "name": "phishforge-puppet-bridge",
+  "private": true,
+  "type": "module",
+  "description": "Playwright sidecar for Evilginx — mirrors login UI when MITM proxy is blocked (authorized red team)",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "build:vendor": "node scripts/build-vendor.mjs"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "diff-dom": "^5.2.1",
+    "express": "^4.21.2",
+    "playwright": "^1.49.0",
+    "playwright-extra": "^4.3.6",
+    "puppeteer": "^25.3.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "socket.io-client": "^4.8.3"
+  }
+}

